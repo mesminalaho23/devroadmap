@@ -1,53 +1,66 @@
+import {
+  FiTarget,
+  FiHelpCircle,
+  FiLayers,
+  FiFolder,
+  FiGithub,
+} from "react-icons/fi";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useLang } from "../context/LangContext";
 
 function About({ progress }) {
+  const { t } = useLang();
+
   return (
     <div className="page about-page">
       <Header progress={progress} />
       <main className="about-content">
-        <h1>À propos de DevRoadmap</h1>
+        <h1>{t("aboutTitle")}</h1>
+
         <section className="about-section">
-          <h2>📌 Le projet</h2>
-          <p>
-            DevRoadmap est un outil interactif conçu pour aider les étudiants et
-            développeurs débutants à suivre leur apprentissage du développement
-            web. Il propose un parcours structuré avec des étapes claires et des
-            ressources de qualité.
-          </p>
+          <h2>
+            <FiTarget className="about-icon" />
+            {t("aboutProjectTitle")}
+          </h2>
+          <p>{t("aboutProjectText")}</p>
         </section>
 
         <section className="about-section">
-          <h2>🎯 Pourquoi cet outil ?</h2>
-          <p>
-            Apprendre le développement web peut être difficile sans un plan
-            clair. DevRoadmap offre une roadmap visuelle qui permet de savoir où
-            l'on en est, quelles compétences restent à acquérir et quelles
-            ressources consulter.
-          </p>
+          <h2>
+            <FiHelpCircle className="about-icon" />
+            {t("aboutWhyTitle")}
+          </h2>
+          <p>{t("aboutWhyText")}</p>
         </section>
 
         <section className="about-section">
-          <h2>🛠️ Technologies utilisées</h2>
+          <h2>
+            <FiLayers className="about-icon" />
+            {t("aboutTechTitle")}
+          </h2>
           <div className="tech-stack">
-            <span className="tech-badge">React</span>
-            <span className="tech-badge">Vite</span>
-            <span className="tech-badge">React Router</span>
-            <span className="tech-badge">localStorage</span>
-            <span className="tech-badge">CSS</span>
+            <span className="tech-badge">⚛️ React</span>
+            <span className="tech-badge">⚡ Vite</span>
+            <span className="tech-badge">🔀 React Router</span>
+            <span className="tech-badge">💾 localStorage</span>
+            <span className="tech-badge">🎨 CSS</span>
           </div>
         </section>
 
         <section className="about-section">
-          <h2>📂 Code source</h2>
+          <h2>
+            <FiFolder className="about-icon" />
+            {t("aboutSourceTitle")}
+          </h2>
           <p>
-            Le code source est disponible sur{" "}
+            {t("aboutSourceText")}{" "}
             <a
               href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              <FiGithub className="inline-icon" /> GitHub
             </a>
             .
           </p>

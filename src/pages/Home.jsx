@@ -1,33 +1,34 @@
 import { Link } from "react-router-dom";
+import { FiArrowRight, FiMap, FiCheckCircle } from "react-icons/fi";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useLang } from "../context/LangContext";
 
 function Home({ progress }) {
+  const { t } = useLang();
+
   return (
     <div className="page home-page">
       <Header progress={progress} />
       <main className="home-hero">
-        <h1>
-          🗺️ <span>DevRoadmap</span>
-        </h1>
-        <p className="home-subtitle">
-          Votre guide interactif pour apprendre le développement web étape par
-          étape.
-        </p>
-        <p className="home-description">
-          Suivez votre progression, cochez les compétences acquises et accédez à
-          des ressources de qualité pour chaque technologie.
-        </p>
+        <div className="home-hero-icon">
+          <FiMap />
+        </div>
+        <h1>{t("heroTitle")}</h1>
+        <p className="home-subtitle">{t("heroSubtitle")}</p>
+        <p className="home-description">{t("heroDescription")}</p>
         {progress > 0 && (
           <div className="home-progress-resume">
+            <FiCheckCircle className="resume-icon" />
             <p>
-              Vous avez déjà complété <strong>{progress}%</strong> de la
-              roadmap !
+              {t("resumeProgress")} <strong>{progress}%</strong>{" "}
+              {t("ofRoadmap")}
             </p>
           </div>
         )}
         <Link to="/roadmap" className="start-button">
-          🚀 Commencer la Roadmap
+          {t("startButton")}
+          <FiArrowRight className="start-arrow" />
         </Link>
       </main>
       <Footer />

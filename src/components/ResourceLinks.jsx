@@ -1,3 +1,5 @@
+import { FiExternalLink } from "react-icons/fi";
+
 function ResourceLinks({ resources }) {
   if (!resources || resources.length === 0) return null;
 
@@ -6,7 +8,8 @@ function ResourceLinks({ resources }) {
       {resources.map((res, i) => (
         <li key={i}>
           <a href={res.url} target="_blank" rel="noopener noreferrer">
-            📖 {res.label}
+            <FiExternalLink className="resource-icon" />
+            {res.label}
           </a>
         </li>
       ))}

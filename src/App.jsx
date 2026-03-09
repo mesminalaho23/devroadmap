@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
+import { LangProvider } from "./context/LangContext";
 import Home from "./pages/Home";
 import Roadmap from "./pages/Roadmap";
 import About from "./pages/About";
@@ -38,23 +40,27 @@ function App() {
       : Math.round((completedSteps.length / totalSteps) * 100);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home progress={progress} />} />
-        <Route
-          path="/roadmap"
-          element={
-            <Roadmap
-              completedSteps={completedSteps}
-              onToggleStep={handleToggleStep}
-              onReset={handleReset}
-              progress={progress}
+    <ThemeProvider>
+      <LangProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home progress={progress} />} />
+            <Route
+              path="/roadmap"
+              element={
+                <Roadmap
+                  completedSteps={completedSteps}
+                  onToggleStep={handleToggleStep}
+                  onReset={handleReset}
+                  progress={progress}
+                />
+              }
             />
-          }
-        />
-        <Route path="/about" element={<About progress={progress} />} />
-      </Routes>
-    </BrowserRouter>
+            <Route path="/about" element={<About progress={progress} />} />
+          </Routes>
+        </BrowserRouter>
+      </LangProvider>
+    </ThemeProvider>
   );
 }
 
