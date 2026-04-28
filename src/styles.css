@@ -1,3 +1,8 @@
+/* styles.css - Main application styling with themes and layout rules
+   styles.css - Styles principaux de l'application avec thèmes et règles de mise en page
+   This file contains CSS variables, color themes, page layout, component styles, and responsive behavior.
+   Ce fichier contient des variables CSS, des thèmes de couleurs, la mise en page des pages, les styles des composants et le comportement responsive. */
+
 /* ===== CSS VARIABLES (LIGHT) ===== */
 :root {
   --bg-primary: #f4f7f9;

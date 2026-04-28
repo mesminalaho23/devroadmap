@@ -9,6 +9,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLang } from "../context/LangContext";
 
+// About.jsx - Page that explains the purpose of the app.
+// About.jsx - Page qui explique le but de l'application.
 function About({ progress }) {
   const { t } = useLang();
 

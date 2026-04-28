@@ -1,3 +1,6 @@
+// roadmapData.js - Data model for the learning roadmap
+// roadmapData.js - Modèle de données pour la roadmap d'apprentissage
+// This file defines categories, steps and resources shown in the app.
 const roadmapData = [
   {
     id: "web-basics",

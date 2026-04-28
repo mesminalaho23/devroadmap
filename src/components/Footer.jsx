@@ -1,6 +1,8 @@
 import { FiGithub, FiHeart } from "react-icons/fi";
 import { useLang } from "../context/LangContext";
 
+// Footer.jsx - Simple footer shown on every page.
+// Footer.jsx - Pied de page affiché sur chaque page.
 function Footer() {
   const { t } = useLang();
 

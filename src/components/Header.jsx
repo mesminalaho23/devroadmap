@@ -5,11 +5,16 @@ import { BiMapAlt } from "react-icons/bi";
 import { useTheme } from "../context/ThemeContext";
 import { useLang } from "../context/LangContext";
 
+// Header.jsx - Top navigation bar with language and theme controls.
+// Header.jsx - Barre de navigation avec contrôle de la langue et du thème.
+
 function Header({ progress }) {
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
   const { lang, toggleLang, t } = useLang();
 
+  // The header shows navigation, theme toggle, language toggle, and progress.
+  // L'en-tête affiche la navigation, le changement de thème, la langue et la progression.
   return (
     <header className="header">
       <Link to="/" className="header-logo">

@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLang } from "../context/LangContext";
 
+// Home.jsx - Landing page for the roadmap app.
+// Home.jsx - Page d'accueil de l'application roadmap.
 function Home({ progress }) {
   const { t } = useLang();
 

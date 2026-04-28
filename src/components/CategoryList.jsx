@@ -2,6 +2,8 @@ import { FiGlobe, FiZap, FiCpu, FiTool } from "react-icons/fi";
 import StepCard from "./StepCard";
 import { useLang } from "../context/LangContext";
 
+// CategoryList.jsx - Displays a category and its steps.
+// CategoryList.jsx - Affiche une catégorie et ses étapes.
 const iconMap = {
   "web-basics": FiGlobe,
   javascript: FiZap,

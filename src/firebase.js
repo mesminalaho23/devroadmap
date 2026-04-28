@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase/app";
 
+// firebase.js - Firebase initialization file
+// firebase.js - Fichier d'initialisation Firebase
+// The Firebase config object contains keys for connecting to a Firebase project.
 const firebaseConfig = {
   apiKey: "AIzaSyCKIscz1XmHLCFukqT1arm60uwql2htxlQ",
   authDomain: "devroadmap-3897c.firebaseapp.com",

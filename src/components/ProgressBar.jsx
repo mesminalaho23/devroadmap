@@ -1,6 +1,8 @@
 import { FiTrendingUp } from "react-icons/fi";
 import { useLang } from "../context/LangContext";
 
+// ProgressBar.jsx - Shows the roadmap completion progress.
+// ProgressBar.jsx - Affiche la progression de la roadmap.
 function ProgressBar({ completed, total }) {
   const { t } = useLang();
   const percent = total === 0 ? 0 : Math.round((completed / total) * 100);

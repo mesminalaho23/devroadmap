@@ -1,3 +1,6 @@
+// translations.js - Translation dictionary for French and English
+// translations.js - Dictionnaire de traduction pour le français et l'anglais
+// The useLang hook looks up keys in this object to display text in the selected language.
 export const translations = {
   fr: {
     // Nav

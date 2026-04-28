@@ -1,5 +1,7 @@
 import { FiExternalLink } from "react-icons/fi";
 
+// ResourceLinks.jsx - Displays a list of external resource links for each step.
+// ResourceLinks.jsx - Affiche une liste de liens de ressources externes pour chaque étape.
 function ResourceLinks({ resources }) {
   if (!resources || resources.length === 0) return null;
 

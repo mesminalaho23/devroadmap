@@ -1,6 +1,8 @@
 import { FiGlobe, FiZap, FiCpu, FiTool } from "react-icons/fi";
 import { useLang } from "../context/LangContext";
 
+// Sidebar.jsx - Category navigation component for the roadmap page.
+// Sidebar.jsx - Composant de navigation des catégories pour la page roadmap.
 const iconMap = {
   "web-basics": FiGlobe,
   javascript: FiZap,

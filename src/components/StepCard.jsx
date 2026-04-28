@@ -2,6 +2,8 @@ import { FiCheckCircle, FiCircle } from "react-icons/fi";
 import ResourceLinks from "./ResourceLinks";
 import { useLang } from "../context/LangContext";
 
+// StepCard.jsx - Represents a single roadmap step with checkbox and links.
+// StepCard.jsx - Représente une étape de la roadmap avec une case à cocher et des liens.
 function StepCard({ step, checked, onToggle }) {
   const { t } = useLang();
 
